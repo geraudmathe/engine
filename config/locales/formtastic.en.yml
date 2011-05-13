@@ -2,6 +2,7 @@ en:
   formtastic:
     titles:
       information: General information
+      groups: Groups
       advanced_options: Advanced options
       meta: SEO Metadata
       code: Code

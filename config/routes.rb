@@ -38,6 +38,10 @@ Rails.application.routes.draw do
     resources :assets, :path => 'asset_collections/:collection_id/assets'
 
     resources :images
+  
+    resources :users
+    
+    resources :groups
 
     resources :content_types
 

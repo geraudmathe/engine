@@ -262,6 +262,9 @@
     #menu li.item.item-5 {
       left: -140px;
       z-index: 988; }
+		#menu li.item.item-6 {
+	    left: -175px;
+	    z-index: 988; }
 
 /* ___ section/color/icon associations ___ */
 #menu li.contents a em {
@@ -391,3 +394,48 @@ body.settings #submenu > ul {
       background: #15527a;
       background: -moz-linear-gradient(0% 100% 90deg, #175b88, #13496c);
       background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#13496c), to(#175b88)); }
+
+
+
+
+
+
+
+
+
+
+
+
+
+body.users #menu li.users {
+	z-index: 999; }
+body.users #menu li.users a {
+	background-position: right -196px }
+body.users #menu li.users a span {
+ color: #fff;
+ text-shadow: none; }
+body.users #menu li.users > span {
+	background-position: -200px -40px }
+body.users #menu li.users.first > span {
+	background-position: -54px 0px; }
+body.users #menu li.users em {
+	position: relative;
+	width: 14px;
+	height: 13px;
+	line-height: 14px;
+	background-position: -14px -32px;
+	top: 11px;
+	left: 0; }
+body.users #submenu > ul {
+	background-color: #FF5454; }
+body.users #submenu > ul > li > a {
+	background: #195f8d;
+	background: -moz-linear-gradient(0% 100% 90deg, #135179, #1f6ea1);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1f6ea1), to(#135179)); }
+body.users #submenu > ul > li > a.on, body.users #submenu > ul > li > a:active {
+ 	background: #15527a;
+ 	background: -moz-linear-gradient(0% 100% 90deg, #175b88, #13496c);
+ 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#13496c), to(#175b88)); }
+
+
+

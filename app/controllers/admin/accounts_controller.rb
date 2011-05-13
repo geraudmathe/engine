@@ -1,8 +1,10 @@
 module Admin
   class AccountsController < BaseController
 
-    sections 'settings'
+    sections 'settings', 'account'
+    actions :edit, :update
 
+    respond_to :json, :only => :update
     def new
       @account = Account.new(:email => params[:email])
     end
@@ -13,6 +15,15 @@ module Admin
 
       respond_with @account, :location => edit_admin_current_site_url
     end
+    
+    def edit
+      @account = Account.find(params[:id])
+      p "update account"
+    end
 
+    def update
+      update! { edit_admin_account_url }
+    end
+    
   end
 end
