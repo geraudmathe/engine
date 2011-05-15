@@ -211,6 +211,14 @@ form.formtastic fieldset ol li.item {
   padding: 3px 10px;
 }
 
+form.formtastic fieldset.userToGroup ol li.item {
+	position: relative;
+	background: transparent url(/images/admin/form/item-popup.png) no-repeat 0 0;
+	height: 25px;
+	width: 445px;
+	margin: 0px 0px 10px 5px;
+	padding: 3px 0px;
+}
 form.formtastic fieldset ol li.item strong {
   font-size: 0.9em;
   font-weight: bold;

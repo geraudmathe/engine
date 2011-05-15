@@ -12,6 +12,7 @@ en:
       sites: Sites
       access_points: Access points
       memberships: Accounts
+      users: Users in this group
       membership_email: Account email
       file: File
       preview: Preview
@@ -51,6 +52,9 @@ en:
         templatized: "Use the page as a template for a model you defined."
         listed: "Control whether to show the page from generated menus."
         content_type_id: "The type of content this page will be a template for."
+      group:
+        opened: The group is enabled or not
+        public: Users can subscribe themselves to this group
       snippet:
         slug: "You need to know it in order to insert the snippet inside a page"
       site:

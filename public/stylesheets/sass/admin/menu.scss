@@ -368,7 +368,7 @@
       }
     }
 
-    @for $i from 2 through 5 {
+    @for $i from 2 through 6 {
       &.item-#{$i} { left: -35px * ($i - 1); z-index: 993 - $i; }
     }
   }
@@ -381,6 +381,7 @@
   @if $color == blue {  $color-index: 3; }
   @if $color == orange {  $color-index: 4; }
   @if $color == red {  $color-index: 5; }
+  @if $color == yellow {  $color-index: 6; }
 
   z-index: 999;
 
@@ -410,6 +411,10 @@
   @include icon(-32px, 14px, 13px, $enabled, 11px);
 }
 
+@mixin menu-meetings-icon($enabled: false) {
+  @include icon(-32px, 14px, 13px, $enabled, 11px);
+}
+
 /* ___ section/color/icon associations ___ */
 
 #menu li.contents a em { @include menu-contents-icon; }
@@ -436,6 +441,36 @@ body.assets {
 body.settings {
   $color: blue;
   #menu li.settings {
+    @include menu-color($color);
+    em { @include menu-settings-icon(true); }
+  }
+  #submenu { @include submenu-color($color); }
+}
+
+#menu li.users a em { @include menu-settings-icon; }
+body.users {
+  $color: orange;
+  #menu li.users {
+    @include menu-color($color);
+    em { @include menu-settings-icon(true); }
+  }
+  #submenu { @include submenu-color($color); }
+}
+
+#menu li.groups a em { @include menu-settings-icon; }
+body.groups {
+  $color: red;
+  #menu li.groups {
+    @include menu-color($color);
+    em { @include menu-settings-icon(true); }
+  }
+  #submenu { @include submenu-color($color); }
+}
+
+#menu li.meetings a em { @include menu-meetings-icon; }
+body.meetings {
+  $color: yellow;
+  #menu li.meetings {
     @include menu-color($color);
     em { @include menu-settings-icon(true); }
   }

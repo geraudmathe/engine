@@ -1,0 +1,7 @@
+%li{ :id => "item-#{user.id}"}
+  %em
+  %strong= link_to "#{user.firstname} #{user.lastname}", edit_admin_user_url(user)
+
+  .more
+   
+    = link_to image_tag('admin/list/icons/trash.png'), admin_user_path(user._id), :class => 'remove', :confirm => t('admin.users.delete.confirm'), :method => :delete

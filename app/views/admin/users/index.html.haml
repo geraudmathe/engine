@@ -7,11 +7,9 @@
 %p!= t('.help')
 =# semantic_form_for @users, :url => admin_users_url, :html => { :class => 'save-with-shortcut' } do |f|
 
-%fieldset{:class=>"foldable"}
-  %legend
-    %span
-      Accounts
-  - @users.each do |user|
-    %li{ :class => "item" }
-      %a{:href=>"/admin/users/#{user._id}/edit"}
-        %strong= user.firstname
+- if @users.empty?
+  %p.no-items!= t('.no_users', :url => new_admin_user_url)
+- else
+  %ul#pages-list
+    = render @users
+

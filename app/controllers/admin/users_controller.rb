@@ -1,11 +1,6 @@
 module Admin
   class UsersController < BaseController
 
-    include ActionView::Helpers::SanitizeHelper
-    extend ActionView::Helpers::SanitizeHelper::ClassMethods
-    include ActionView::Helpers::TextHelper
-    include ActionView::Helpers::NumberHelper
-
     sections 'users'
     
     def index
@@ -13,25 +8,35 @@ module Admin
     end
 
     def new
-      @user = User.new
+      @user = User.new(params[:user])
     end
     
     def create
-      p params
       @user = User.create(params[:user])
       #current_site.memberships.create(:user => @user) if @user.errors.empty?
-      if @user = User.create(params[:user])
-        respond_with @user, :location => admin_users_url
+      if @user.errors.empty?
+        redirect_to admin_users_path
       else
-        render "edit"
+        flash[:notice] = @user.errors
+        redirect_to new_admin_user_path params
       end
     end
     
     def edit
-      p params
       @user = User.find(params[:id])
       respond_with @user, :location => edit_admin_user_url
     end
+    
+    def destroy
+      @user = User.find params[:id]
+      if @user.destroy
+        flash[:notice] = t(".user_deleted")
+        redirect_to admin_users_path
+      else
+        
+      end
+    end
+    
   end
 
 end

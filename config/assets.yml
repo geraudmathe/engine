@@ -71,6 +71,8 @@ javascripts:
     - public/javascripts/admin/snippets.js
   theme_assets:
     - public/javascripts/admin/theme_assets.js
+  groups:
+      - public/javascripts/admin/groups.js
 
 stylesheets:
   ie:

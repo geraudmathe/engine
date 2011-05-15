@@ -1,8 +1,5 @@
 - title t('.title')
 
-- content_for :submenu do
-  = render 'admin/shared/menu/settings'
-
 %p!= t('.help')
 
 = semantic_form_for @user, :url => admin_users_url do |f|
@@ -10,8 +7,7 @@
   = f.foldable_inputs :name => :information do
     = f.input :firstname
     = f.input :lastname
-  = f.foldable_inputs :name => :groups do
-    = f.input :firstname
+    = f.input :email
     
   = f.foldable_inputs :name => :credentials do
     = f.input :password, :input_html => { :autocomplete => "off" }

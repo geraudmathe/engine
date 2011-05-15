@@ -149,7 +149,7 @@ ul.theme-assets li.hidden strong a { font-style: italic; color: #8B8D9A; font-we
   clear: both;
 }
 
-#pages-list li em {
+#pages-list li em , .userToGroup section li.item em{
   display: block;
   float: left;
   background: transparent url(/images/admin/list/item-left.png) no-repeat left 0;
@@ -157,6 +157,10 @@ ul.theme-assets li.hidden strong a { font-style: italic; color: #8B8D9A; font-we
   width: 18px;
 }
 
+form.formtastic fieldset.userToGroup ol section li.item em{
+	background-position: 0 -35px;
+	margin-left:0px;
+}
 #pages-list ul.folder li em {
   background-position: left -31px;
   cursor: move;
@@ -246,3 +250,24 @@ ul.theme-assets li.hidden strong a { font-style: italic; color: #8B8D9A; font-we
 
 
 
+/*-----------------------------group page---------------------*/
+
+.userToGroup section{
+	width: 445px;
+	float: left;
+	border: 2px solid gray;
+	border-radius: 6px;
+	margin: 5px;
+}
+.userToGroup section h5{
+	background-color: gray;
+	margin: 0 0 10px;
+	padding: 0 12px;
+}
+.userToGroup section ul{
+	min-height:200px;
+	overflow-y:scrollbar;
+}
+.userToGroup section li.item{
+	margin: 7px 5px;
+}

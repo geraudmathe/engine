@@ -1,0 +1,13 @@
+= f.foldable_inputs :name => :information do
+  = f.input :name
+  = f.input :description
+
+= f.foldable_inputs :name => :options do
+  = f.custom_input :opened, :css => 'toggle' do
+    = f.check_box :opened
+  = f.custom_input :public, :css => 'toggle' do
+    = f.check_box :public
+
+
+  
+      

@@ -60,7 +60,11 @@ Rails.application.routes.draw do
     # installation guide
     match '/installation' => 'installation#show', :defaults => { :step => 1 }, :as => :installation
     match '/installation/:step' => 'installation#show', :as => :installation_step
-
+    
+    
+    #added by Bewculture
+    match '/addgroupuser/:id', :to => "groups#addgroupuser",:method => :post, :as => :ajax_add_user
+    match '/removegroupuser/:id', :to => "groups#removegroupuser",:method => :post, :as => :ajax_remove_user
   end
 
   # sitemap
@@ -70,4 +74,7 @@ Rails.application.routes.draw do
   match '/' => 'admin/rendering#show'
   match '*path/edit' => 'admin/rendering#show', :defaults => { :editing => true }
   match '*path' => 'admin/rendering#show'
+  
+
+  
 end
